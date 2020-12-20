@@ -1,0 +1,14 @@
+USE sqlinjection;
+DROP TABLE users;
+DROP TABLE posts;
+CREATE TABLE users(
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+CREATE TABLE posts(
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    post VARCHAR(255),
+    userId INT NOT NULL,
+    FOREIGN KEY (userId) REFERENCES users(id)
+);

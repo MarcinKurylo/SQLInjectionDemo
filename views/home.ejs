@@ -1,0 +1,16 @@
+<%- include('partials/head') %> 
+    <main>
+        <h1>SQL Injection Demo</h1>
+        <form action="/secret" method="post">
+            <div class="frmgrp">
+                <label for="username">Podaj nazwę użytkownika</label>
+                <input type="text" name="username" id="username">
+            </div>
+            <div class="frmgrp">
+                <label for="password">Podaj hasło</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <button type="submit">Zaloguj się</button>
+        </form>
+    </main>
+<%- include('partials/footer') %> 
